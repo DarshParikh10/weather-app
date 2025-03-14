@@ -1,0 +1,167 @@
+/* 🌈 General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: linear-gradient(120deg, #FF9A8B, #FF6A88, #FF99AC);
+    color: white;
+    transition: background 0.5s ease-in-out;
+}
+
+/* 🌤️ Main Container */
+.container {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+/* 🔍 Circular Search Bar with Hover Effect */
+input[name="city"] {
+    padding: 12px 20px;
+    width: 280px;
+    border: none;
+    border-radius: 50px;  /* Makes it circular */
+    font-size: 18px;
+    text-align: center;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Hover Effect */
+input[name="city"]:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid white;
+}
+
+/* Focus Effect */
+input[name="city"]:focus {
+    background: white;
+    color: black;
+    border: 2px solid #ff477e;
+}
+
+/* 🔘 Unit Toggle */
+.unit-toggle {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.unit-toggle label {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+/* 🌡️ Weather Card */
+.weather-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    display: inline-block;
+    backdrop-filter: blur(10px);
+    margin-top: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+/* 🌦️ Forecast Cards */
+.forecast-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.forecast-card {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    width: 120px;
+}
+
+/* 🔄 Loading Effect */
+.loading {
+    display: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    animation: fade 1s infinite alternate;
+}
+
+@keyframes fade {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+/* 🌙 Circular Dark Mode Toggle */
+#dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: #333;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect for Dark Mode Button */
+#dark-mode-toggle:hover {
+    background: white;
+    color: black;
+}
+
+/* 🔍 Search Button */
+#search-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: #ff477e;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect for Search Button */
+#search-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* 🌙 Dark Mode */
+.dark-mode {
+    background: linear-gradient(120deg, #141E30, #243B55);
+}
+
+.dark-mode .weather-card {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* 🔍 Autocomplete Suggestions */
+#suggestions {
+    position: absolute;
+    width: 250px;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    text-align: left;
+    padding: 5px;
+}
+
+#suggestions div {
+    padding: 5px;
+    cursor: pointer;
+}
+
+#suggestions div:hover {
+    background: #ddd;
+}
